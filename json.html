@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON PRACTICE</title>
+</head>
+<body>
+    <script>
+        fetch('users.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                document.body.innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            
+            });
+    </script>
+</body>
+</html>

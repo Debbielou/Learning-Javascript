@@ -1,0 +1,16 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    padding: opx 20px;
+}
+
+li input {
+    display: none;
+}
+
+li.edit span {
+    display: none;
+}
+li.edit input {
+    display: none;
+}

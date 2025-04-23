@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <p id="command">This is my beautiful page</p>
+    <button onclick="clicked()">Click me</button>
+    <script>
+        function clicked() {
+            alert("I am a supersar!");
+            document.getElementById("command").innerHTML = "Button clicked!";
+            document.getElementById("command").style.color = "red";
+        }
+    </script>
+</body>
+</html>
