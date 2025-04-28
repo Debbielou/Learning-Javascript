@@ -56,3 +56,48 @@ console.log(person);
 // console.log(mid);
 // console.log(person1);
 
+const numbers = [4, 9, 16, 25, 29];
+console.log(numbers.find((number) => number > 20));
+console.log(numbers.findIndex((number) => number > 20));
+
+const points = [40, 100, 1, 5, 25, 10];
+console.log(points.sort((a, b) => a - b));
+console.log(points.sort((a, b) => b - a));
+console.log(points.sort((a, b) => a - b).reverse());
+
+const cars = [
+    {type:"Volvo", year:2016},
+    {type:"Saab", year:2001},
+    {type:"BMW", year:2010}
+  ];
+  console.log(cars.sort((a, b) => a.year - b.year));
+
+   
+  const carz = [
+    { type: "Volvo", year: 2016 },
+    { type: "Saab", year: 2001 },
+    { type: "BMW", year: 2010 }
+  ];
+  
+  function sortCarsByType(carzArray) {
+    carzArray.sort(function(a, b) {
+      const x = a.type.toLowerCase();
+      const y = b.type.toLowerCase();
+      if (x < y) {
+        return -1;
+      }
+      if (x > y) {
+        return 1;
+      }
+      return 0;
+    });
+    return carzArray; // It's good practice to return the sorted array
+  }
+  
+  function displayCarsInConsole(carzArray) {
+    carzArray.forEach(carz => {
+      console.log(`${carz.type} ${carz.year}`);
+    });
+  }
+  
+  

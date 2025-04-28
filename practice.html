@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Revision</title>
+</head>
+<body>
+<!-- <h1 class="message">1st Heading</h1>
+<div id="container">
+    <h1 class="message">2nd Heading</h1>
+    <h1 class="message">3rd Heading</h1>
+</div>
+    <script>
+let cont = document.getElementById("container");
+let msg = document.getElementsByClassName("message");
+let msg1 = document.querySelector(".message");
+console.log(cont);
+console.log(msg);
+console.log(msg1);
+    </script> -->
+    
+    <!-- <script>
+        let div = document.createElement("div");
+        div.innerHTML = "<h1>Newly created paragraph</h1>";
+        div.className = "message";
+        document.body.appendChild(div);
+        console.log(div);
+    </script> -->
+  <ul id="menu">
+    <li>Home</li>
+    <li>About</li>
+    <li>Blog</li>
+    <li style="display: none;">Project</li>
+  </ul>
+    <script>
+        let menu = document.getElementById("menu");
+        let li = document.createElement("li");
+        li.innerHTML = "Contact";
+        li.innerHTML = "Services";
+        menu.appendChild(li);
+        
+        // menu.removeChild(menu.children[2]);
+        menu.children[0].style.color = "red";
+        menu.after(li);
+        // menu.insertAdjacentHTML("afterbegin", "<li>Newly added</li>");
+        // menu.insertAdjacentElement("afterbegin", "<li>Apple</li>");
+        // menu.insertAdjacentElement("beforeend", "<li>Banana</li>");
+        // menu.insertAdjacentElement("beforebegin", "<li>Orange</li>");
+        menu.replaceChild("Shoes", menu.children[0]);
+    </script>
+</body>
+</html>
