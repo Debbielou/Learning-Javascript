@@ -21,3 +21,4 @@ console.log(typeof car)
 
 let box;
 console.log(box)
+
