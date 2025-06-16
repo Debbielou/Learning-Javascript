@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning DOM</title>
+   </head>
+<body>
+    <p id="demo">Learning DOM</p>
+    <input type="text" placeholder="Type something here...">
+    <p class="animal">Click the button below:</p>
+    <p name="first-name">Student</p>
+    <h2>I am enjoying Masaka</h2>
+    <div id="mucungwa" style="background-color: lightseagreen; height: 200px; width: 200px;">
+    
+    </div>
+    <img src="Roses.png" alt="Roses" width="200" height="200" id="rose-image">
+    <button>Click</button>
+    <script>
+        // document.getElementById("demo").innerHTML = "Hello Debz!";
+        document.getElementsByClassName("animal")[0].innerHTML = "Hello World!";
+        document.getElementsByName("first-name")[0].innerHTML = "Dear Student!";
+        let v = document.getElementById("demo");
+        let m = document.getElementsByTagName("h2")[0];
+        v.innerHTML = "Training";
+        document.getElementById("rose-image").src = "HTML.png";
+        let y = document.createElement("h2");
+        y.innerHTML = "Fridayyyyyy";
+        let c = document.getElementById("mucungwa");
+        let t = document.createElement("h1");
+        t.innerHTML = "I am learning DOM";
+        c.appendChild(t);
+        c.replaceChild(y, t);
+        document.write("<h1>Welcome to DOM</h1>");
+        
+    </script>
+    
+</body>
+</html>

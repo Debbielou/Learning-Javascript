@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="styling">Styling my things</p>
+    <button onclick="myFuction()">Click</button>
+    <button id="event">Event Listener</button>
+    <p id="coffee">You are the best</p>
+    <script>
+        document.getElementById("styling").style.color = "red";
+        document.getElementById("styling").style.fontSize = "80px";
+
+        function myFuction() {
+            alert("You clicked the button!");
+        }
+
+        // Adding an event listener to the button
+        document.getElementById("event").addEventListener("mouseover", alertUser); 
+           function alertUser() {
+            alert("You hovered over the event listener button!");
+        }
+            document.getElementById("coffee").addEventListener("click", changeMe) 
+        function changeMe() {
+            document.getElementById("coffee").style.color = "blue";
+            document.getElementById("coffee").style.fontSize = "50px";
+            document.getElementById("coffee").innerHTML = "You are the best coffee!";
+        }
+          
+            
+    </script>
+</body>
+</html>

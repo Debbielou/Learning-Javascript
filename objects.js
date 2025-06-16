@@ -53,3 +53,32 @@ const employee = {
     }
   }
   console.log(patient.disease.name);
+
+  function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = first;
+    }
+
+  let myFather = new Person("John", "Doe", 50, "blue");
+  console.log(myFather.eyeColor);
+
+  //object methods
+  let users = {
+    fName: "Debbie",
+    lName: "Cox",
+    age: 20,
+  }
+
+  let myVillage = {
+    name: "Kiboga",
+    location: "Central Uganda",
+    population: 10000,
+  }
+  Object.assign(myVillage, users);
+  console.log(myVillage);
+  console.log(users);
+
+  let x = Object.create(users);
+  console.log("The new object is: ", x.lName);

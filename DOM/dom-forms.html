@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="submission.php" method="post" onsubmit="return validateForm()">
+        FName <input type="text" name="fname" id="fname" required><br>
+        LName <input type="text" name="lname" id="lname" disabled><br>
+        password <input type="password" name="password" id="password"><br>
+        email <input type="text" name="email" id="email"><br>
+        <button type="submit">Submit</button>
+        <script>
+            function validateForm() {
+                const fname = document.getElementById("fname").value;
+                const lname = document.getElementById("lname").value;
+                const password = document.getElementById("password").value;
+                const email = document.getElementById("email").value;
+
+
+                if (fname === "" || lname === "" || password === "") {
+                    alert("All fields must be filled out");
+                    return false;
+                } else if (fname.length < 3 || lname.length < 3) {
+                    alert("First name and last name must be at least 3 characters long");
+                    return false;
+                } else if (password.length < 6) {
+                    alert("Password must be at least 6 characters long");
+                } else if (!email.includes("@") || !email.includes(".")) {
+                    alert("Please enter a valid email address");
+
+                } return false;
+            }
+
+        </script>
+    </form>
+</body>
+
+</html>

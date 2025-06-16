@@ -63,3 +63,15 @@ const companyNamesDestructuringDefault = companies.map(
 );
 console.log(companyNamesDestructuringDefault);
 // // map with arrow function and implicit return and ternary operator and default value and destructuring and default value and rest operator
+
+const names = ["Zoe", "John", "Theodore", "Doe", "Ethan", "Alice"];
+const filteredNames = []
+names.forEach((name) => {
+  if (name.startsWith("Z")) {
+    filteredNames.push(name);
+  }
+});
+console.log(filteredNames);
+
+const shortNames = names.filter((name) => name.length <= 4);
+console.log(shortNames);
