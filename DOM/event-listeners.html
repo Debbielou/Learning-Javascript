@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="demo">Tap here</button>
+    <div id="turn" class="changer"></div>
+    <p id="yo"></p>
+    <div id="pass"></div>
+    <p id="chacha"></p>
+    <script>
+        let x = document.getElementById("demo");
+        let d = document.getElementById("turn");
+        d.style.backgroundColor = "blue";
+        d.style.width = "100px";
+        d.style.height = "100px";
+        x.addEventListener("click", myDemo);
+        function myDemo() {
+            d.style.backgroundColor = "chocolate";
+            d.style.width = "200px";
+            d.style.height = "200px";
+
+        }
+        d.addEventListener("click", function myDemo2() {
+            alert('call mummy');
+        });
+
+        window.addEventListener("resize", function () {
+            document.getElementById("yo").innerHTML = "Stap  it!";
+        });
+
+        //passing parameters
+        let pass = document.getElementById("pass");
+        pass.style.backgroundColor = "yellow";
+        pass.style.width = "100px";
+        pass.style.height = "100px";
+        let buy = "I aint yo mama";
+        let buy2 = "Alimba alimba";
+        pass.addEventListener("mouseover", function () {
+            callerTune(buy, buy2);
+        })
+        function callerTune(tune1, tune2) {
+            let pee = document.getElementById("chacha");
+            pee.innerHTML = tune1 + " " + tune2;
+            x.removeEventListener("click", myDemo);
+        }
+    </script>
+</body>
+
+</html>
