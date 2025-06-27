@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Web Worker API</h2>
+    <p>count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+        let w;
+        function startWorker() {
+            // Step 1: Correctly check for browser support for Web Workers
+            if (typeof (Worker) !== "undefined") { 
+                // Step 2: Check if a worker instance already exists to avoid creating multiple
+                if (typeof (w) == "undefined") { 
+                    w = new Worker("worker-api.js"); 
+
+                    // This part was also missing to actually display the worker's messages
+                    w.onmessage = function(event) {
+                        document.getElementById("result").innerHTML = event.data;
+                    };
+                }
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers.";
+            }
+        }
+
+        function stopWorker() {
+            if (w) {
+                w.terminate();
+                w = undefined; 
+                document.getElementById("result").innerHTML = "Worker stopped.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

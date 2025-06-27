@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .red {
+            color: red;
+        } */
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            // $('h1').addClass('red');
+            // $(h1).html('Hello World');
+            $('button').click(function () {
+                $('h1').html('Heya students!').css('color','blue');
+                // $('h1').html('Hello World');
+            });
+        });
+
+        // Alternatively, the shorter, common way to write it:
+        /*
+        $(function() {
+            $('h1').addClass('red');
+        });
+        */
+    </script>
+</head>
+
+<body>
+
+    <!-- <h1>Learning jquery</h1> -->
+     <button>Tap to change</button>
+    <h1>Still Learning jQuery</h1>
+</body>
+
+</html>

@@ -1,12 +1,10 @@
-const me = {
-    name: 'John',
-    greet: function() {
-        return this;
-    },
-    arrowGreet: () => {
-        return this;
-    }
+const student = ()=>{
+    console.log("Hello, my name is Debbie Lou");
+    
 }
+student();
 
-console.log(me.greet()); // Returns the me object
-console.log(me.arrowGreet()); // Returns the global object (or undefined in strict mode)
+let addition = (x,y)=>{
+    console.log(x + y);
+}
+addition(5, 10);
