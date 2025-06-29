@@ -60,3 +60,14 @@ let displayFullName = ({names: {first, last}}) => {
     console.log(`Full Name: ${first} ${last}`);
 }
 displayFullName(member); // Full Name: John Doe
+
+let employee= {
+  names: "Jane",
+  position: "Developer",
+}
+let {names, position} = employee;
+console.log(names); // Jane
+
+const ms= ['apple', 'banana', 'cherry'];
+let {w, v, q} = ms;
+console.log(w); // apple
