@@ -71,3 +71,20 @@ console.log(names); // Jane
 const ms= ['apple', 'banana', 'cherry'];
 let {w, v, q} = ms;
 console.log(w); // apple
+
+function calculator(r,t,i){
+  const add = r+t+i;
+  const sub = r-t-i;
+  const div = r/t/i;
+  return [add,sub,div];
+ }
+ let [sum,sub,div] = calculator(10,5,2);
+  console.log(sum); // 17
+
+  function naming (firstN,lastN,age){
+    return {firstNames: firstN, lastNames: lastN, ages: age};
+  }
+
+  let {firstNames, lastNames, ages} = naming("John", "Doe", 30);
+
+  
